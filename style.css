@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.main-head{
+    margin-top: 35vh;
+}
+
+.intro{
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: bolder;
+    font-size: 6.5vw;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2vh 0 2vh 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2rem;
+    margin-left: 1.5rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+}
+
+.glck{
+    font-style: italic;
+    font-size: 7.5vw;
+    font-family: "gloock", sans-serif;
+}
+
+.navbar{
+    margin-right: 1.5rem;
+    gap: 1rem;
+}
+
+.navbar a{
+    margin: 2px 5px 0 5px;
+    font-size: 1.15rem;
+    color: black;
+    font-family: "Nunito Sans", sans-serif;
+    text-decoration: none;
+    display: inline-block; 
+    transition: font-weight 0.2s ease, transform 0.2s ease;
+}
+
+.navbar a:hover {
+    font-weight: 700;
+    transform: scale(1.05);
+}
+
+.about-heading {
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 4.5vw;
+    font-weight: bold;
+    color: black; 
+    margin-bottom: 2rem;
+}
+
+.about-heading .highlight {
+    font-family: 'Gloock', serif; 
+    font-style: normal; 
+}
+
+
+.main-about{
+    width: 60%;
+    height: 100vh;
+    margin-top: 25vh;
+}
+
+.main-cv{
+    width: 60%;
+    height: 100vh;
+    margin-top: 25vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-head{
+    font-size: 2rem;
+    font-family: 'Gloock', serif; 
+    margin: 1rem 0 1rem 0;
+}
+
+.about-content{
+    font-size: 1.2rem;
+}
+
+.icons img{
+    max-height:50px;
+    max-width: 50px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.left-cv{
+    height: 200vh;
+}
+.right-cv{
+    height: 130vh;
+}
