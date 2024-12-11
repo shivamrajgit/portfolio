@@ -7,22 +7,66 @@
     <title>My Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gloock&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="actual-header">
+        <div class="links">
+            <a class="git" href="https://github.com/shivamrajgit"><ion-icon name="logo-github"></ion-icon></a>
+            <a class="ln" href="https://www.linkedin.com/in/sr-on-ln/"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a class="readcv" href="#"><ion-icon name="reader"></ion-icon></a>
+        </div>
+        <div class="time">Time Here</div>
+        <div class="switch">
+            <div class="toggle-switch">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle"></label>
+          </div>
+        </div>
+    </div>
+
     <header class="header">
-        <a href="index.html" class="logo">icy_</a>
         <nav class="navbar">
-            <a href="about.html">About</a>
-            <a href="cv.html">CV</a>
-            <a href="#">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    <div class="main-head">
-        <h1 class="intro">I create websites,<br>models & <div class="glck">memories.</div></h1>
+    <div id="home" class="hero">
+        <div class="main-head">
+            <h1 class="intro">I create websites,<br>models & <div class="glck">memories.</div>
+            </h1>
+        </div>
     </div>
+    <div id="about" class="main-about">
+        <div class="content">
+            <p>
+                Hi! I'm a sophomore at Guru Gobind Singh Indraprastha University, focusing on Machine Learning and Web
+                Development through hands-on projects. While college teaches me a lot, I often find its pace slow
+                compared to the fast-moving world, so I'm always eager to learn and apply new skills on my own. My
+                passion for beautiful, well-designed things drives my interest in web development, while the excitement
+                around AI fuels my curiosity to explore machine learning. I also love experimenting with different
+                technologies to find what suits me best. In my free time, I enjoy gaming, reading novels, and binging on
+                anime or series. If you have a project we can collaborate on, feel free to reach out!
+            </p>
+        </div>
+        <h1 class="about-heading">Hey, I'm Shivam Raj.</h1>
+    </div>
+    <div id="contact" class="main-contact">
+        <p>Always motivated to work towards growth. I bring energy and enthusiasm to creative and collaborative teams.
+        </p>
+        <br>
+        <p>Presently looking for opportunities to grab and things to learn as a student. I like to maintain healthy
+            balance between work, life and play.</p>
+        <br>
+        <p>Feel free to email me or connect on LinkedIn, Thanks for tuning in.</p>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

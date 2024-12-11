@@ -1,114 +1,239 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+:root {
+    --main-color: rgb(0, 0, 0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+    overflow: auto;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.actual-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+}
+
+.actual-header a {
+    text-decoration: none;
+}
+
+ion-icon {
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+.time {
+    font-size: 0.82rem;
+    font-family: 'roboto';
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    gap: 0.6rem;
+    padding: 1rem;
+    flex: 1;
+    text-align: left;
+}
+
+.switch {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+/* Hide the checkbox */
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider background */
+.toggle-switch label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    /* Light grey background */
+    border-radius: 30px;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* The circle inside the switch */
+.toggle-switch label:before {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* When the checkbox is checked */
+.toggle-switch input:checked+label {
+    background-color: #ffffff;
+    /* Change background to green (optional) */
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-switch input:checked+label:before {
+    transform: translateX(30px);
+    /* Moves the circle to the right */
+}
+
+.main-head {
+    margin-top: 15vh;
+    margin-right: 10vw;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.main-head{
-    margin-top: 35vh;
-}
-
-.intro{
+.intro {
     font-family: 'Neue Montreal', sans-serif;
     font-weight: bolder;
     font-size: 6.5vw;
 }
 
-.header{
+.header {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     padding: 2vh 0 2vh 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 100;
 }
 
-.logo{
-    font-size: 2rem;
-    margin-left: 1.5rem;
-    font-family: "Nunito Sans", sans-serif;
-    font-weight: 700;
-    color: black;
-    text-decoration: none;
-}
-
-.glck{
+.glck {
     font-style: italic;
     font-size: 7.5vw;
     font-family: "gloock", sans-serif;
 }
 
-.navbar{
-    margin-right: 1.5rem;
-    gap: 1rem;
+.navbar {
+    width: auto;
+    border-radius: 2rem;
+    padding: 0.7rem 2.2rem 0.7rem 2.2rem;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    background-color: rgba(120, 120, 120, 0.1);
+    justify-content: center;
+    gap: 1.2rem;
 }
 
-.navbar a{
-    margin: 2px 5px 0 5px;
-    font-size: 1.15rem;
-    color: black;
-    font-family: "Nunito Sans", sans-serif;
+.navbar a {
+    font-size: 14px;
+    color: var(--main-color);
+    font-family: 'roboto';
+    font-weight: 350;
     text-decoration: none;
-    display: inline-block; 
-    transition: font-weight 0.2s ease, transform 0.2s ease;
-}
-
-.navbar a:hover {
-    font-weight: 700;
-    transform: scale(1.05);
 }
 
 .about-heading {
+    width: 100%;
     font-family: 'Neue Montreal', sans-serif;
-    font-size: 4.5vw;
+    font-size: 10vw;
     font-weight: bold;
-    color: black; 
-    margin-bottom: 2rem;
+    margin-left: 0.5rem;
+    margin-bottom: 2.5rem;
 }
 
-.about-heading .highlight {
-    font-family: 'Gloock', serif; 
-    font-style: normal; 
-}
-
-
-.main-about{
-    width: 60%;
-    height: 100vh;
+.main-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 99vh;
     margin-top: 25vh;
 }
 
-.main-cv{
-    width: 60%;
+.main-cv {
+    width: 50%;
     height: 100vh;
     margin-top: 25vh;
     display: flex;
     justify-content: space-between;
 }
 
-.about-head{
-    font-size: 2rem;
-    font-family: 'Gloock', serif; 
-    margin: 1rem 0 1rem 0;
+.about-content {
+    font-size: 1rem;
 }
 
-.about-content{
-    font-size: 1.2rem;
+.content {
+    margin-left: 1.2rem;
+    width: 45%;
+    font-size: 1.6rem;
 }
 
-.icons img{
-    max-height:50px;
+.icons img {
+    max-height: 50px;
     max-width: 50px;
 }
 
-.icons{
+.icons {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,9 +241,32 @@ body{
 
 }
 
-.left-cv{
+.left-cv {
     height: 200vh;
 }
-.right-cv{
+
+.right-cv {
     height: 130vh;
+}
+
+.main-about p {
+    font-family: "Roboto";
+    font-weight: 350;
+}
+
+.main-contact {
+    width: 50%;
+    height: 100vh;
+    padding-top: 25vh;
+    margin-top: 25vh;
+}
+
+.main-contact h1 {
+    font-family: 'Gloock', serif;
+    margin-bottom: 1rem;
+}
+
+.main-contact p {
+    font-family: "Roboto";
+    font-weight: 350;
 }
