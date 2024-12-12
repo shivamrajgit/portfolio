@@ -2,8 +2,14 @@ let time = document.querySelector(".time");
 
 setInterval(() => {
     let d = new Date();
-    time.innerHTML = d.toLocaleTimeString();
-},1000)
+    time.innerHTML = d.toLocaleTimeString([], { 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit', 
+        hour12: false 
+    });
+}, 1000);
+
 
 let modeSwitch = document.querySelector("input");
 

@@ -19,6 +19,7 @@ body.dark-mode {
 
 
 body {
+    width: 99%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,8 +48,10 @@ html {
     top: 0;
     left: 0;
     width: 100%;
+    height: 10%;
     z-index: 20;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    background: linear-gradient(to bottom, white , transparent);
+    backdrop-filter: blur(10px);
 }
 
 .actual-header a {
@@ -61,9 +64,9 @@ ion-icon {
 }
 
 .time {
-    font-size: 0.82rem;
+    font-size: 0.9rem;
     font-family: 'roboto';
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .links {
@@ -141,6 +144,7 @@ ion-icon {
 }
 
 .hero {
+    margin: 0.5rem;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -151,7 +155,7 @@ ion-icon {
 .intro {
     font-family: 'Neue Montreal', sans-serif;
     font-weight: bolder;
-    font-size: 6.5vw;
+    font-size: 6rem;
 }
 
 .header {
@@ -168,7 +172,7 @@ ion-icon {
 
 .glck {
     font-style: italic;
-    font-size: 7.5vw;
+    font-size: 6.4rem;
     font-family: "gloock", sans-serif;
 }
 
@@ -195,7 +199,7 @@ ion-icon {
 .about-heading {
     width: 100%;
     font-family: 'Neue Montreal', sans-serif;
-    font-size: 10vw;
+    font-size: 9.5rem;
     font-weight: bold;
     margin-left: 0.5rem;
     margin-bottom: 2.5rem;
@@ -206,25 +210,13 @@ ion-icon {
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    height: 99vh;
+    min-height: 99vh;
     margin-top: 25vh;
-}
-
-.main-cv {
-    width: 50%;
-    height: 100vh;
-    margin-top: 25vh;
-    display: flex;
-    justify-content: space-between;
-}
-
-.about-content {
-    font-size: 1rem;
 }
 
 .content {
     margin-left: 1.2rem;
-    width: 45%;
+    width: 45vw;
     font-size: 1.6rem;
 }
 
@@ -241,14 +233,6 @@ ion-icon {
 
 }
 
-.left-cv {
-    height: 200vh;
-}
-
-.right-cv {
-    height: 130vh;
-}
-
 .main-about p {
     font-family: "Roboto";
     font-weight: 350;
@@ -261,12 +245,53 @@ ion-icon {
     margin-top: 25vh;
 }
 
-.main-contact h1 {
-    font-family: 'Gloock', serif;
-    margin-bottom: 1rem;
-}
-
 .main-contact p {
     font-family: "Roboto";
     font-weight: 350;
+}
+
+@media screen and (max-width: 600px){
+    .intro{
+        font-size: 3rem;
+        padding-left: 2rem;
+    }
+    .glck{
+        font-size: 3.2rem;
+    }
+    .about-heading{
+        margin-left: 1rem;
+        font-size: 3.4rem;
+        margin-right: 1rem;
+    }
+    .content{
+        font-size: 0.8rem;
+        width: 80%;
+        margin-bottom: 1.6rem;
+    }
+    .main-contact{
+        width: 80%;
+    }
+    .time{
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 600px){
+    .intro{
+        font-size: 4rem;
+        padding-left: 2rem;
+    }
+    .glck{
+        font-size: 4.2rem;
+    }
+    .about-heading{
+        margin-left: 1rem;
+        font-size: 4.4rem;
+        margin-right: 1rem;
+    }
+    .content{
+        font-size: 1rem;
+        width: 80%;
+        margin-bottom: 1.6rem;
+    }
 }
