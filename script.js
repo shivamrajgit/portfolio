@@ -18,9 +18,11 @@ modeSwitch.addEventListener("change",(evt) => {
         console.log("Dark mode enabled");
         document.body.classList.add("dark-mode");
         document.documentElement.style.setProperty("--main-color", "white");
+        document.documentElement.style.setProperty("--side-color", "black");
     } else {
         console.log("Light mode enabled");
         document.body.classList.remove("dark-mode");
         document.documentElement.style.setProperty("--main-color", "black");
+        document.documentElement.style.setProperty("--side-color", "white");
     }
 })
